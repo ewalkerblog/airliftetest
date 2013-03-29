@@ -1,0 +1,31 @@
+<h1>Listing hosts</h1>
+
+<table>
+  <tr>
+    <th>From</th>
+    <th>To</th>
+    <th>When</th>
+    <th>Time</th>
+    <th>Flexible</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hosts.each do |host| %>
+  <tr>
+    <td><%= host.from %></td>
+    <td><%= host.to %></td>
+    <td><%= host.when %></td>
+    <td><%= host.time %></td>
+    <td><%= host.flexible %></td>
+    <td><%= link_to 'Show', host %></td>
+    <td><%= link_to 'Edit', edit_host_path(host) %></td>
+    <td><%= link_to 'Destroy', host, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Host', new_host_path %>

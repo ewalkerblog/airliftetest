@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From:</b>
+  <%= @host.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @host.to %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%= @host.when %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @host.time %>
+</p>
+
+<p>
+  <b>Flexible:</b>
+  <%= @host.flexible %>
+</p>
+
+
+<%= link_to 'Edit', edit_host_path(@host) %> |
+<%= link_to 'Back', hosts_path %>
